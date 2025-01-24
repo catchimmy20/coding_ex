@@ -38,21 +38,49 @@
             </ul>
         </aside>
         <main>
-            <p>       
-                <article>
-                    <h2>main 태그 안</h2>
-                    <p>주요 내용...</p>
-                </article>
+            <p>
+            <article>
+                <h2>main 태그 안</h2>
+                <p>주요 내용...</p>
+            </article>
             </p>
-            <p style="background-color: white; width: fit-content;">
-                <code>
-                    String <var>hello</var> = <kbd>"Hello World!"</kbd>;<br>
+            <h3 style="font-weight: bold;">코드</h5>
+                <p style="background-color: white; width: fit-content;">
+                    <code>
+                    <span style="color: blue;">String</span> <var>hello</var> = <kbd>"Hello World!"</kbd>;<br>
                     System.out.println(hello);
                 </code>
-            </p>
+                </p>
+                <section style="background-color: antiquewhite;width: fit-content;">
+                    <p>일본어 표시 태그</p>
+                    <!-- 마우스 올렸을 때 내용이 보이게 함 -->
+                    <abbr title="뜻: 단가">
+                        <ruby>
+                            短歌
+                            <rt>たんか</rt>
+                        </ruby>
+                    </abbr>
+                </section>
+                <article>
+                    <div>
+                        <ul>
+                            <!-- 견본품 -->
+                            <template>
+                                <li>
+                                    <span>글번호</span>
+                                    <span>제목</span>
+                                    <span>작성자</span>
+                                    <span>작성시간</span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </article>
         </main>
     </div>
-
+    <footer>
+        <p>© copyright 웹 페이지</p>
+    </footer>
 </body>
 
 </html>
