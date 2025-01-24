@@ -1,0 +1,21 @@
+aside {
+    width: 200px;
+    height: 500px;
+    background-color: bisque;
+}
+
+nav {
+    background-color: beige;
+    overflow: hidden;
+    height: 30px;
+}
+
+.content {
+    display: flex;
+}
+
+main{
+    background-color: azure;
+    min-width: 1000px;
+    padding-inline: 100px;
+}
