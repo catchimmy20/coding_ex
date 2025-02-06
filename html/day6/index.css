@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(167, 232, 232);
+}
+
+div {
+    width: fit-content;
+    height: auto;
+}
+
+.linking {
+    background-color: beige;
+}
+
+.a {
+    background-color: pink;
+
+}
+
+.b {
+    background-color: rgb(240, 229, 231);
+}
+
+#myid {
+    background-color: rgb(120, 120, 221);
+}
+
+[type=password] {
+    background-color: aqua;
+}
+
+[data-list~=1] {
+    background-color: rgb(200, 168, 229);
+}
+
+.group#first {
+    background-color: rgb(244, 129, 129);
+}
+
+#second,
+#third {
+    background-color: yellow;
+}
+
+.tag_select {
+    font-size: 30px;
+}
+
+.box1 span {
+    background-color: rgb(244, 193, 99);
+}
+
+.box2>p {
+    color: red;
+    font-weight: bold;
+}
+
+#first~div {
+    background-color: lightgreen;
+}
+
+#have:first-of-type {
+    color: blue;
+    font-weight: bold;
+}
+
+.click {
+    font-size: 50px;
+}
+
+.click:active {
+    background-color: green;
+
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+.hover:hover{
+    background-color: purple;
+    color: white;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: green;
+    font-weight: bold;
+}

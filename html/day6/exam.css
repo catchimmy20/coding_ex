@@ -1,0 +1,29 @@
+/* table */
+table {
+    font-size: 30px;
+}
+
+/* tbody :where(
+    tr:nth-child(even)>td:nth-child(even),
+    tr:nth-child(odd)>td:nth-child(odd)
+) {
+    background-color: pink;
+}
+
+tbody :not(
+    tr:nth-child(even)>td:nth-child(even),
+    tr:nth-child(odd)>td:nth-child(odd)
+) {
+    background-color: skyblue;
+} */
+
+tbody> :nth-child(even)> :nth-child(even),
+tbody> :nth-child(odd)> :nth-child(odd) {
+    background-color: pink;
+}
+
+tbody> :nth-child(even)> :nth-child(odd),
+tbody> :nth-child(odd)> :nth-child(even) {
+    background-color: skyblue;
+}
+
