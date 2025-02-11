@@ -1,0 +1,76 @@
+/* 
+box-sizing 영역의 크기를 계산할때(width, height) 
+그냥 Contents만 영역의 크기로 쓸것이냐 
+Border까지를 영역의 크기로 이용할것이냔 선택하는 속성 
+예 w:100,h:100 p:10,b:2 
+기본적으로 : 124x124가 나온다 
+border : 100x100 
+
+작성법 - box-sizing:종류;
+종류 border-box : border까지를 width,
+height로 계산 content-box : content만 width,
+height로 계산
+*/
+
+
+/* div, span{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    display: block;
+    padding: auto;
+    margin: auto;
+    border: 3px solid rgb(14, 36, 235);
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: 0px;
+    position: sticky;
+    overflow: hidden; */
+    /* opacity: 0.5; */
+    /* visibility: collapse; */
+    /* background-image: url('https: //i.natgeofe.com/n/e484088d-3334-4ab6-9b75-623f7b8505c9/1086_3x2.jpg');
+    background-size: cover; */
+/* }    */
+
+/* left, right, top, bottom */
+/* 
+    이동을 위해 사용하는 속성인데 기준선에 맞춰서 이동을 하기 때문에 
+    기준선을 알 수 없으면 ->이동을 못한다
+*/
+
+div {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    transform: perspective(), skewX(40deg);
+    filter: brightness(160%)    
+}
+
+
+/* objecg-fit */
+/* 
+    cover=>이미지의 한 축이라도 빈공간이 없을때까지 크기를 변경하겠다, 공백 제거 덮어쓰기 
+    contain=>이미지의 한 축이라도 크기가 맞춰질때까지 변경하겠다 
+    fill=>이미지를 해당 크기로 구겨서라도 맞춰서 넣겠다 
+    scale-down=>none과 contain중 작은것, 영역안에 최대한 원본을 유지하는 이미지가 나오도록 
+    none=>변경 없음
+*/
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* list-style-type, list-style */
+/* 
+
+*/
+ol {
+    /* list-style-type: decimal-leading-zero;   */
+
+    list-style-image: url('https: //encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DfHI7SQ8Gt7x22MeC0yihn-MCfa9rBIdOA&s')
+}

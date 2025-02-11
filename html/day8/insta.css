@@ -1,0 +1,56 @@
+:root {
+    --gray: rgb(219, 219, 219);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position:sticky;
+    top: 0px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    border-color: var(--gray);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.main-contents {
+    width: 1080px;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.half {
+    display: inline-block;
+    width: 50%;
+}
+
+.auth{
+    text-align: right;
+}
+
+.full {
+    display: inline-block;
+    width: 100%;
+}
+
+.profile {
+    height: 180px;
+}
+
+.profile-image {
+    width: 30%;
+}
+
+.profile-info {
+    width: 70%;
+}
+
+.login { 
+    border: none;
+    
+}

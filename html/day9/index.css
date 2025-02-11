@@ -1,0 +1,19 @@
+/* 
+nowrap - 그냥 넘쳐서 쌓인다 
+wrap - row or column, 정방향으로 쌓인다 
+wrap-reverse - row-reverse or column-reverse, 역방향으로 쌓인다
+*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 200px;height: 200px;
+    background-color: red;
+}
+
+.item{
+    width: 30px; height: 30px;
+    background-color: green;
+}

@@ -1,0 +1,220 @@
+/* 
+    속성을 적을 때 기본값이 inherit인 경우가 대부분임
+    상위에 적으면 하위는 모두 동일하게 적용
+    ex) div 안의 span 속성 동일하게 적용
+*/
+@import url('default.css');
+/* div {
+    font-family: 'Harrington', 'Ownglyph_wiseelist-Rg', 'NanumMyeongjo', sans-serif;
+}
+
+span {
+    font-family: inherit;
+} */
+
+/* 
+    @font-face
+    사용자 pc에 폰트가 없어도 자동 다운로드해서 적용
+
+    @font-face {
+        font-family: '폰트명',
+        src: url('다운로드 경로') format('확장자가 ttf가 아닐때 확장자명');
+    }
+*/
+
+/* @font-face {
+    font-family: 'Ownglyph_wiseelist-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2501-1@1.1/Ownglyph_wiseelist-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* 
+    크기 종류
+        px => 픽셀 (점의 단위)
+        pt => 포인터 (인쇄 단위)
+        % => 배수 (단위: 백분율, 기준: 부모태그)
+        em => 배수 (단위: 배수, 기준: 부모태그)
+        rem => 배수 (단위: 배수, 기준: html태그)
+        vh => viewport(화면)의 height를 기준으로 백분율 => 1vh -> 화면의 1%
+        vw => viewport(화면)의 weight 기준으로 백분율=>1vw ->화면의 1%
+        vmin => viewport 중 작은 쪽을 기준으로 백분율
+        vmax => viewport 중 큰 쪽을 기준으로 백분율
+*/
+
+/* span{
+    font-size: 2rem;
+
+}
+
+div {
+    font-size: 5vw;
+} */
+/* rem은 브라우저에 고정돼있음. */
+/* 
+    font-weight: 두께 조절
+    100, 200, 300 ... : =>100단위 숫자 
+    bold(700), lighter, bolder(800)=>이름으로 쓰는 단위
+    * 단 일부 폰트는 적용 안될 수 있음
+*/
+
+/* div {
+    font-weight: bold;
+} */
+
+
+/* 
+    기본: normal
+    기울어짐: italic
+    oblique: italic 지원안될 경우
+*/
+
+/* 
+    text-decoration: 밑줄 긋기
+        none - 없음 
+        underline - 밑줄 
+        overline - 윗줄 
+        line-through - 관통선
+*/
+
+
+/* 
+    direction 글자의 작성 방향을 선정하는 속성 
+    작성법 - direction: 종류;
+    종류 
+    ltr ->left to right 
+    rtl ->right to left
+*/
+
+/* td {
+    direction: rtl;
+} */
+
+/* 글자의 작성 위치를 선정하는 속성(정렬) */
+/* 
+    text-align: 종류;
+    left, right, center
+*/
+/* td {
+    text-align: center;
+} */
+
+/* line-height: 글자의 높이 지정 */
+/* 
+    높이 지정시 콘텐츠의 크기가 높이보다 작으면 공백을 추가하는데 
+    공백을 추가시 위/아래로 동일하게 추가하기 때문에 
+    상하 중앙 정렬할때도 이용
+*/
+/* td {
+    line-height: 30px;
+} */
+
+/* 
+    letter-spacing 자간조정 (글자 사이의 공백)
+    word-spacing 단어 사이의 공백
+*/
+
+/* td {
+    letter-spacing: -10px;
+    word-spacing: 10px;
+} */
+
+/* 
+    text-indent 들여쓰기 조정 속성
+    => 왼쪽에 공백을 추가함
+*/
+
+/* div > div:not(:first-child) {
+    text-indent: 30px;
+} */
+
+/* 
+    white-space 줄바꿈을 처리하는 속성 
+    작성법 - white-space:종류;
+    종류 
+    normal - 줄바꿈 됨 
+    nowrap - 줄바꿈 안됨
+
+*/
+/* div {
+    white-space: nowrap;
+} */
+
+/*
+    line-break : wbr을 개선한 줄바꿈
+        auto,
+        normal - 단어 단위로 자동 처리 
+        loose - 조금더 느슨하게 처리 ->단어가 길면 중간에 줄바꿈을 하기도 한다 
+        anywhere - 글자 단위로 줄바꿈 처리
+*/
+
+/* div {
+    line-break: anywhere;
+} */
+
+/* 
+        text-overflow 
+        글자가 영역을 넘어갈때 어떤식의 동작이 이루어질지 정하는 속성 
+        작성법 - text-overflow:종류;
+        종류 
+            clip - 자르기 
+            ellipsis - 말줄임표(...)으로 대체
+        주의사항 
+        white-space:nowrap; 줄바꿈을 제거하고 
+        overflow:hidden; 넘치는걸 안보이게 제거해야지만 동작하는 속성
+*/
+
+/* div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+
+/* 
+    rgba(255, 255, 255, 0.5)
+    =>색상 코드에 투명도도 포함해서 반환하는 함수 투명도는 0~1
+    hsl(0%, 100%, 50%)
+        =>Hue(색상), Saturation(채도), Lightness(명도)로 색을 조절하는 함수 0~100% 
+    hsla(0%, 0%, 0%, 0.5)=>hsl에 alpha 추가
+*/
+/* div {
+    color: hsl(270 100% 55%); 
+} */
+
+/* //////////////////////////////// */
+
+/* importing */
+
+
+
+/* variable */
+/* 
+    주의사항 
+    1. 사용하기 전에 만들어야한다 
+    2. 별명 앞에 --는 필수 
+    3. 만든 변수는 선택자 안에서만 사용이 가능
+        변수를 만드는 위치가 변수의 제한 영역 변수를 모든 곳에서 쓰고 싶다면 
+        ->최상위 태그에서 제작 
+        :root=>DOM 구조의 document 
+        :root ->모든 태그 최상위 
+        :root {
+            변수;
+        }
+        ->어디서든 이용이 가능한 변수
+
+*/
+/* body {
+    --color1: blue;
+    --color2: red;
+} */
+
+header,
+article,
+footer {
+    color: var(--color1);
+}
+
+aside {
+    color: var(--color2);
+}

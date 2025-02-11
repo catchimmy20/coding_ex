@@ -1,0 +1,3 @@
+.index-tb td > td:not(:first-child){
+    text-indent: 30px;
+}
