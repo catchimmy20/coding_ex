@@ -1,0 +1,15 @@
+/* 힌트 */
+
+div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@media screen and (width >= 768px) {
+    div {gap:4px;}
+    .lv1{grid-row-end: span 2;}
+    .lv2 {
+        grid-row-end: span 2; grid-column-end: ;
+    }
+
+}

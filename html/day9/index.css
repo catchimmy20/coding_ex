@@ -4,7 +4,7 @@ wrap - row or column, 정방향으로 쌓인다
 wrap-reverse - row-reverse or column-reverse, 역방향으로 쌓인다
 */
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,8 +12,46 @@ wrap-reverse - row-reverse or column-reverse, 역방향으로 쌓인다
     width: 200px;height: 200px;
     background-color: red;
 }
-
+.item:first-child{flex-grow:2;}
 .item{
     width: 30px; height: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
     background-color: green;
+} */
+
+/* 버튼 3개 2개로 양 끝에 위치 */
+/* .container {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.container {
+    display: grid;
+    gap: 5px;
+    width: 180px; height: 180px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    /* grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 30px;
+    grid-auto-columns: 30px; */
+    /* grid-auto-flow: column; */
+    background-color: brown;
+}
+
+/* repeat에서 auto-fit, auto-fill 차이점 */
+/* 
+    auto-fit: 공백 없이 채움
+    auto-fill: 공백이 존재함
+*/
+
+.item{
+    background-color: rgb(152, 152, 197);
+}
+
+/* 바둑판에 들어가는 아이템의 격자 크기를 변경해서 2칸,
+3칸 등 여러칸을 차지하도록 만드는 속성 */
+.item:first-child{
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
